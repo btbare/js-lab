@@ -1,0 +1,15 @@
+<body>
+
+    <button id ="btn">Mmmm....nah not this one...</button>
+
+    <script>
+        
+        const bgChange2 = () => document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16)
+
+        setInterval(bgChange, 3000)
+        
+        document.getElementById('btn').addEventListener('click', bgChange)
+
+    </script>
+
+</body>

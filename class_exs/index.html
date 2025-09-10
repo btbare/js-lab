@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Skeleton</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1>Hello, World!</h1>
+    <p>This is a basic HTML skeleton.</p>
+
+    <h2>Subsection</h2>
+    <p style = "color: red">This is a basic HTML skeleton.</p>
+
+    <hr>
+
+    <h2>Subsection</h2>
+    <p>something</p>
+
+
+<script>
+    let x = 10;
+    x += 5;
+    console.log(`The value of x is: ${x}`);
+
+    alert("Hello, this is an alert box!");
+    document.write("This text is written using document.write()");
+    document.body.style.backgroundColor = "#000000";
+    
+    document.queerySelector("p").onclick = function() {
+        alert("You clicked the heading!");
+    };
+    document.querySelector("p").onmouseover = function() {
+        document.querySelector("p").style.color = "blue";
+    };
+
+</script>
+
+</body>
+</html>

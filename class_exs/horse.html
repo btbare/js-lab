@@ -1,0 +1,25 @@
+<body>
+
+    <div id="horse">Neigh:</div>
+
+    <script>
+
+        //this is missing the catch document.getElementById('horse');
+        //reference the DOM
+
+        //assign it to a constant to catch the information
+        const horsey = document.getElementById('horse');
+
+        //these are largely equal in what the achieve
+        horsey.textContent = 'Mare';    
+        horsey.innerText = '123'
+        horsey.innerHTML = 'Beware the Mare'
+        x = 0;
+
+        setInterval(() => {
+            horsey.textContent += '*'
+        }, 10);
+
+    </script>
+
+</body>
