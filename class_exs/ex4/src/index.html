@@ -1,0 +1,18 @@
+<h2 style="color: blue">cbell</h2>
+
+<p id="dText">content goes here</p>
+
+<script>
+    console.log("works")
+
+    fetch('https://swapi.tech/api/people/1/')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not OK');
+            }
+            return response.json();
+            }).then(data => {
+                console.log('Character Data:', data);
+            })
+ 
+</script>

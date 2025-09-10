@@ -1,0 +1,15 @@
+{
+  "name": "ex4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "taco": "echo bell",
+    "dev": "vite ./src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^7.1.5"
+  }
+}
