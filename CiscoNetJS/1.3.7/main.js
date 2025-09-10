@@ -1,0 +1,1 @@
+console.log("This is an example of how to use src tags")
