@@ -3,70 +3,106 @@
 <html lang="en">
 
 	<head>
-    
 		<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<meta name="color-scheme" content="light dark">
-    	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-		>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="color-scheme" content="light dark">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 		<title>Hello world!</title>
 	</head>
 
 	<body>
-		
+
 		<main class="container">
 
-		<h1>Lottery</h1>
-		
-			<input id="number" type="number" name="number" placeholder="How Many Tickets?" aria-label="Number">
+			<h1>Lottery</h1>
+			<input id="tickets" type="number" name="number" placeholder="How Many Tickets?" aria-label="Number">
 			
 			<article>
 				<fieldset>
-				<legend>Lottery preference:</legend>
-				<label>
-					<input type="radio" name="language" checked />
-					Powerball ($2/ticket)
-				</label>
-				<label>
-					<input type="radio" name="language" />
-					Powerball Lite ($1/ticket)
-				</label>
+
+					<legend>Lottery preference:</legend>
+
+					<label> Powerball ($2/ticket)
+					<input id="pball" type="radio" name="language" checked />
+					</label>
+
+					<label> Powerball Lite ($1/ticket)
+					<input id="plite" type="radio" name="language" />
+					</label>
+
 				</fieldset>
 			</article>
 			
 			<article>
 				<fieldset>
-				<legend>Powerball Extras:</legend>
-				<label>
-					<input type="checkbox" name="language" />
-					Powerplay (+$1)
-				</label>
-				<label>
-					<input type="checkbox" name="language" />
-					Double Play (+$1)
-				</label>
+					
+					<legend>Powerball Extras:</legend>
+
+					<label> Powerplay (+$1)
+					<input id="powerplay" type="checkbox" name="language" />
+					</label>
+
+					<label> Double Play (+$1)
+					<input id="double" type="checkbox" name="language" />
+					</label>
+
 				</fieldset>
 			</article>
 				
 			<fieldset role="group">
-				<button>Calculate</button>
-				<input
-				type="text"
-				name="text"
-				value="$0.00"
-				aria-label=""
-				readonly
-				>
-			</fieldset>
-		
+
+				<button id="calc">Calculate</button>
+				<input id ="result" type="text" name="text" value="$0.00" aria-label="" readonly>
+
+			</fieldset>	
+
 		</main>
 		
-		<script>
-			
-		</script>
-	
 	</body>
+	
+	<script>
+		
+			const tickets = document.getElementById("tickets")
 
+			const pball = document.getElementById("pball")
+			const plite = document.getElementById("plite")
+			
+			const powerplay = document.getElementById("powerplay")
+			const double = document.getElementById("double")
+			const result = document.getElementById("result")
+
+
+			//  need to find out how to add a "$" and ".00" to the output of the block below, 
+			//  currently it outputs standalone digits
+			//
+			//	ex)	current output: 4
+			//		desired output: $4.00
+			//	also im sure there is opprotunity to refactor that I have yet to see
+
+			let calc = document.getElementById("calc").addEventListener("click", () => {
+				if (pball.checked){	
+					if (!powerplay.checked && !double.checked){
+						result.value = tickets.value * 2
+					}
+					if (powerplay.checked || double.checked){
+						result.value = tickets.value * 3
+					}
+					if (powerplay.checked && double.checked){
+						result.value = tickets.value * 4
+					}
+				}
+				if (plite.checked){	
+					if (!powerplay.checked && !double.checked){
+						result.value = tickets.value 
+					}
+					if (powerplay.checked || double.checked){
+						result.value = tickets.value * 2
+					}
+					if (powerplay.checked && double.checked){
+						result.value = tickets.value * 3
+					}
+				}
+			})		
+
+		</script>
 </html>
