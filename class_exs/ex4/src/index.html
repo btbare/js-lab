@@ -13,6 +13,9 @@
             return response.json();
             }).then(data => {
                 console.log('Character Data:', data);
+                //alert(data.result.properties.name)
+                document.getElementById("dText").innerText = data.result.properties.name
+                
             })
  
 </script>
