@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CiscoNetJS 2.0.8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Welcome to CiscoNetJS 2.0.8</h1>
+    <p>This is a starter HTML file.</p>
+    
+    <script>
+    //  declaring variable/const locally will be visible only
+    //  inside the block in which it was declared
+        let  height  =  180;
+        {
+            let  weight  =  70;
+            height += 100
+            console.log(height);  //  ->  280
+            console.log(weight);  //  ->  70	
+
+            height = -100
+            height += weight
+            console.log(height) // -> -30
+
+            height = 180
+        }
+
+        console.log(height+height);  //  ->  360
+        console.log(weight);  //  ->  Uncaught  ReferenceError:  weight  is  not  defined
+
+    </script>
+
+</body>
+</html>
