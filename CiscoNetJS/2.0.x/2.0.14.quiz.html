@@ -1,0 +1,51 @@
+<script>
+    console.log("Question 1: ")
+
+    // -> text from the chapter below:
+    //  the price of a single rose (8) and the number of roses you have (70)
+    //  the price of a single lily (10) and the number of lilies you have (50)
+    //  the price of a single tulip (2) and the number of tulips you have (120)
+
+    //  Now declare three variables, one each for the roses, lilies, and tulips you have, 
+    //  in which you place their total price. Insert the corresponding values into the 
+    //  variables using the variables declared in the previous step. Finally, declare a 
+    //  variable in which you store the price of all your flowers (again, use the previous 
+    //  variables for initialization). Display all inventory information in the console     
+    //  in the following form:
+
+    let rosePrice = 8
+    let roseAmount = 70
+
+    let lilyPrice = 10
+    let lilyAmount = 50
+
+    let tulipPrice = 2
+    let tulipAmount = 120
+
+    // using anon function to allow interchangable function
+    // more DRY 
+    // and less i didn have to type as much
+
+    const flowerInfo = (flower, fPrice, fAmount) => {
+        console.log(flower, " - unit price: ", fPrice, ", quantity: ", fAmount, "value: ", fPrice*fAmount)
+    }
+
+    flowerInfo("Rose", rosePrice, roseAmount)
+    flowerInfo("Lily", lilyPrice, lilyAmount)
+    flowerInfo("Tulip", tulipPrice, tulipAmount)
+
+    // -> im sure there is means to make an interchangable function that 
+    // calc the totals easier than this console.log() but i m lay z :P
+
+    console.log("total: $", rosePrice*roseAmount + lilyPrice*lilyAmount + tulipPrice*tulipAmount)
+
+</script>
+
+<hr>
+
+<script>
+    console.log("Question 2: ")
+
+    // -> text from the chapter below:
+    // nvm im skipping this its more of the same
+</script>
