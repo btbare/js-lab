@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Lookup</title>
+  <script>
+    async function getWeather() {
+      const zipInput = document.getElementById("zipInput").value;
+      const response = await fetch(`http://localhost:3000/weather?zipcode=${zipInput}`);
+      
+      if (response.ok) {
+        const data = await response.json();
+        document.getElementById("tempOutput").value = data.temp;
+      } else {
+        alert("Failed to fetch weather data.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Weather by ZIP Code</h2>
+  <input type="text" id="zipInput" placeholder="Enter ZIP code" />
+  <button onclick="getWeather()">Get Temperature</button>
+  <br><br>
+  <input type="text" id="tempOutput" placeholder="Temperature" readonly />
+</body>
+</html>

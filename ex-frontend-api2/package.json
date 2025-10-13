@@ -1,0 +1,14 @@
+{
+  "name": "ex-frontend-api2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^7.1.9"
+  }
+}
