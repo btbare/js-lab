@@ -51,6 +51,10 @@ let images = [
     },
 ]
 
+images.forEach(element => {
+    console.log(`${element.title} (${element.artist}, ${element.date})`)
+});
+
 function factory(title:String, artist:String, date:Number){
     return {title:title, artist:artist, date:date}
 }

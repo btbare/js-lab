@@ -50,6 +50,9 @@ var images = [
         date: 1512
     },
 ];
+images.forEach(function (element) {
+    console.log("".concat(element.title, " (").concat(element.artist, ", ").concat(element.date, ")"));
+});
 function factory(title, artist, date) {
     return { title: title, artist: artist, date: date };
 }
