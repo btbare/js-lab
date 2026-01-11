@@ -1,3 +1,15 @@
+class Bank{
+
+    private branches: Array<string>
+    
+}
+
+class Branch{
+
+    private _accounts: Array<String>
+
+}
+
 class BankAccount{
 
     private _ID: string
@@ -16,6 +28,14 @@ class BankAccount{
 
     public set balance(amount:number){
         this._balance = amount
+    }
+
+    public withdraw(amount:number){
+        this.balance -= amount
+    }
+
+    public deposit(amount:number){
+        this.balance += amount
     }
 
 }
