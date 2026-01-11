@@ -1,12 +1,28 @@
 class Bank{
 
-    private branches: Array<string>
+    private _branches: Array<Branch>
+    // private _accounts: Array<Array<BankAccount>> ?? unsure about this
+    
+    // figure out how to use inheritance properly. 
+    // Have _accounts be shared amoung the branch and bank class instancee
+
+    // or maybe better just to have an array of Branch objects within Bank? 
+    // Since an array of BankAccounts already would exist in the Branches, would then that BankAccounts array be available to objects of the Bank class?
+    // idk
+    
+    // michael jackson
     
 }
 
 class Branch{
 
-    private _accounts: Array<String>
+    private _accounts: Array<BankAccount>
+    private _location: string
+
+    constructor(_accounts: Array<BankAccount>, _location: string){
+        this._accounts = _accounts
+        this._location = _location
+    }
 
 }
 
@@ -25,7 +41,6 @@ class BankAccount{
     public get balance(){
         return this._balance
     }
-
     public set balance(amount:number){
         this._balance = amount
     }
