@@ -10,8 +10,6 @@ class Bank{
     // Since an array of BankAccounts already would exist in the Branches, would then that BankAccounts array be available to objects of the Bank class?
     // idk
     
-    // michael jackson
-    
 }
 
 class Branch{
